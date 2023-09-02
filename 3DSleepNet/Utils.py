@@ -81,35 +81,6 @@ def PrintScore(true, pred,all_scores, savePath=None, average='macro'):
     print('   Precision\t', metrics.precision_score(true, pred, average=None), file=saveFile)
     print('      Recall\t', metrics.recall_score(true, pred, average=None), file=saveFile)
     print("All folds' acc:\t ", all_scores,file=saveFile)
-    # score = {"Main scores": {
-    #     "Acc": metrics.accuracy_score(true, pred),
-    #     "Kappa": metrics.cohen_kappa_score(true, pred),
-    #     "F1-score": {
-    #         "value": metrics.f1_score(true, pred, average=average),
-    #         "avg": average},
-    #     "Precision": {
-    #         "value": metrics.precision_score(true, pred, average=average),
-    #         "avg": average},
-    #     "Recall": {
-    #         "value": metrics.recall_score(true, pred, average=average),
-    #         "avg": average}
-    # },
-    #     "Classification report": metrics.classification_report(true, pred,
-    #                                                            target_names=['Wake', 'N1', 'N2', 'N3', 'REM']),
-    #     "Confusion matrix": {"Wake":metrics.confusion_matrix(true, pred)[0].tolist(),
-    #                          "N1":metrics.confusion_matrix(true, pred)[1].tolist(),
-    #                          "N2":metrics.confusion_matrix(true, pred)[2].tolist(),
-    #                          "N3":metrics.confusion_matrix(true, pred)[3].tolist(),
-    #                          "REM":metrics.confusion_matrix(true, pred)[4].tolist()},
-    #     "Results of each class":{
-    #         "F1-Score":metrics.f1_score(true, pred, average=None).tolist(),
-    #         "Precision":metrics.precision_score(true, pred, average=None).tolist(),
-    #         "Recall":metrics.recall_score(true, pred, average=None).tolist()
-    #     }
-    # }
-    # with open(os.path.join(savePath,"result.json"), "w", encoding='utf-8') as f:
-    #     # json.dump(dict_var, f)  # 写为一行
-    #     json.dump(score,f,  indent=2, ensure_ascii=False)  # 写为多行
 
     if savePath != None:
         saveFile.close()
