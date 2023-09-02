@@ -1,4 +1,4 @@
-# 3DSLeepNet
+# 3DSleepNet
 
 Code of the paper '3DSleepNet: A Multi-Channel Bio-Signal Based Sleep Stages Classification Method Using Deep Learning'.
 ## Dataset
