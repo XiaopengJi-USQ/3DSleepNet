@@ -1,0 +1,7 @@
+{
+    "fold": 10,
+    "epoch": 30,
+    "batch_size":30,
+    "lr":0.0001,
+    "save_path": "D:\\3DCNN_code\\ISRUC_S3\\result\\"
+}

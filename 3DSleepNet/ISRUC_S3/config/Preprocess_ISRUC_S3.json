@@ -1,0 +1,99 @@
+{
+    "sampling_rate": 200,
+    "epoch_length": 30,
+    "overlap": 0,
+    "exclude_subjects_data": [],
+    "exclude_subjects_label": [],
+    "channels_to_use": ["F3_A2", "C3_A2", "F4_A1", "C4_A1", "O1_A2", "O2_A1", "ROC_A1", "LOC_A2", "X1"],
+    "save_path": "D:\\3DCNN_code\\ISRUC_S3\\extracted_features\\",
+    "filters": {
+        "notch_filter": {
+            "use": false,
+            "removed_frequency": 50,
+            "q": 30
+        },
+        "high_pass_filter": {
+            "use": false,
+            "stop_frequency": 0.5,
+            "level": 5
+        },
+        "low_pass_filter": {
+            "use": false,
+            "stop_frequency": 50,
+            "level": 8
+        },
+        "band_pass_filter": {
+            "use": false,
+            "high_cut": 50,
+            "low_cut": 0.1,
+            "level": 5
+        },
+        "wavelet_filter": {
+            "use": false,
+            "threshold": 0.04,
+            "filter": "db8"
+        }
+    },
+    "extract_frequency_bands":{
+      "delta": {
+        "use": true,
+        "high_cut": 4,
+        "low_cut": 0.5,
+        "level": 5
+      },
+      "delta_theta": {
+        "use": true,
+        "high_cut": 6,
+        "low_cut": 2,
+        "level": 5
+      },
+      "theta": {
+        "use": true,
+        "high_cut": 8,
+        "low_cut": 4,
+        "level": 5
+      },
+      "theta_alpha": {
+        "use": true,
+        "high_cut": 11,
+        "low_cut": 6,
+        "level": 5
+      },
+      "alpha": {
+        "use": true,
+        "high_cut": 14,
+        "low_cut": 8,
+        "level": 5
+      },
+      "alpha_beta": {
+        "use": true,
+        "high_cut": 22,
+        "low_cut": 11,
+        "level": 5
+      },
+      "beta": {
+        "use": true,
+        "high_cut": 31,
+        "low_cut": 14,
+        "level": 5
+      },
+      "beta_gamma": {
+        "use": true,
+        "high_cut": 40,
+        "low_cut": 22,
+        "level": 5
+      },
+      "gamma": {
+        "use": true,
+        "high_cut": 49,
+        "low_cut": 31,
+        "level": 5
+      }
+    },
+    "data_augment": {
+      "split":{
+        "use": true,
+        "split_number": 2
+      }
+    }
+}
